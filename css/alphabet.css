@@ -1,0 +1,76 @@
+.letter-card-wrapper {
+  position: absolute;
+  
+}
+
+.letter-card-placeholder {
+  position: relative;
+  padding-top: 100%;
+}
+
+.letter-card {
+  position: absolute;
+  background-color: rgb(243, 243, 243);
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 10px;
+  box-sizing: border-box;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  transition: left 0.1s ease-in, 
+              top 0.1s ease-in, 
+              right 0.1s ease-in, 
+              bottom 0.1s ease-in,
+              transform 0.1s ease-in;
+}
+
+.letter-card:hover {
+  z-index: 1;
+  transform: scale(1.05,1.05);
+  /*right: calc(-25%/2);
+  bottom: calc(-25%/2);
+  left: calc(-25%/2);
+  top: calc(-25%/2);*/
+}
+
+.letter-card:hover .letter-card--text {
+  font-size: calc(24px + 5%);
+}
+
+.letter-card:hover .letter-card--letter {
+  font-size: calc(96px + 5%);
+}
+
+.letter-card--letter {
+  color: red;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 1.0em;
+  text-align: center;
+  transition: font-size 0.1s ease-in;
+}
+
+.letter-card--text {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 5px;
+  text-align: center;
+  font-size: 24px;
+  transition: font-size 0.1s ease-in;
+}
+
+.letter-card--img {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  right: 10%;
+  top: 20%;
+  background-position: 50%;
+  background-size: contain;
+}
