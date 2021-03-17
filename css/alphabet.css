@@ -11,7 +11,7 @@
 .letter-card {
   position: absolute;
   background-color: rgb(243, 243, 243);
-  border: 1px solid rgb(209, 209, 209);
+  border: 1px solid rgb(221, 221, 221);
   border-radius: 10px;
   box-sizing: border-box;
   top: 0px;
@@ -40,17 +40,17 @@
 }
 
 .letter-card:hover .letter-card--letter {
-  font-size: calc(96px + 5%);
+  font-size: calc(92px + 5%);
 }
 
 .letter-card--letter {
-  color: red;
   position: absolute;
   left: 10%;
   top: 10%;
   font-size: 96px;
+  width: 0.6em;
   font-weight: 600;
-  line-height: 1.0em;
+  line-height: 0.6em;
   text-align: center;
   transition: font-size 0.1s ease-in;
 }
@@ -69,8 +69,62 @@
   position: absolute;
   bottom: 0;
   width: 50%;
-  right: 10%;
+  right: 5%;
   top: 20%;
   background-position: 50%;
   background-size: contain;
+}
+
+@media screen and (max-width: 576px) {
+  .letter-card--letter {
+    font-size: 15vw;
+  }
+  .letter-card:hover .letter-card--letter {
+    font-size: calc(15vw + 5%);
+  }
+  .letter-card--text {
+    font-size: 5vw;
+  }
+  .letter-card:hover .letter-card--text {
+    font-size: calc(5vw + 5%);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .letter-card--letter {
+    font-size: 86px;
+  }
+  .letter-card:hover .letter-card--letter {
+    font-size: calc(86px + 5%);
+  }
+  .letter-card--text {
+    font-size: 24px;
+  }
+  .letter-card:hover .letter-card--text {
+    font-size: calc(24px + 5%);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .letter-card--letter {
+    font-size: 76px;
+  }
+  .letter-card:hover .letter-card--letter {
+    font-size: calc(76px + 5%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .letter-card--letter {
+    font-size: 96px;
+  }
+  .letter-card:hover .letter-card--letter {
+    font-size: calc(96px + 5%);
+  }
+  .letter-card--text {
+    font-size: 32px;
+  }
+  .letter-card:hover .letter-card--text {
+    font-size: calc(32px + 5%);
+  }
 }
