@@ -19,6 +19,9 @@
   left: 0px;
   right: 0px;
 
+  cursor: pointer;
+  user-select: none;
+
   transition: left 0.1s ease-in, 
               top 0.1s ease-in, 
               right 0.1s ease-in, 
@@ -29,10 +32,10 @@
 .letter-card:hover {
   z-index: 1;
   transform: scale(1.05,1.05);
-  /*right: calc(-25%/2);
-  bottom: calc(-25%/2);
-  left: calc(-25%/2);
-  top: calc(-25%/2);*/
+}
+
+.leter-card-click {
+  animation: click-card 0.3s ease-in;
 }
 
 .letter-card:hover .letter-card--text {
@@ -73,6 +76,15 @@
   top: 20%;
   background-position: 50%;
   background-size: contain;
+}
+
+@keyframes click-card {
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
 }
 
 @media screen and (max-width: 576px) {

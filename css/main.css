@@ -68,7 +68,8 @@ nav ul li ul li a {
   white-space: nowrap;
 }
 
-nav ul li a {
+nav ul li a,
+nav ul li span {
   border: 1px solid transparent;
   border-radius: 8px;
   color:rgb(51, 51, 51);
@@ -80,16 +81,13 @@ nav ul li a:visited {
   color:rgb(51, 51, 51);
 }
 
-nav ul li:hover > a {
+nav ul li:hover > a,
+nav ul li:hover > span {
   color:rgb(235, 235, 235);
   background-color: rgb(65, 65, 65);
 }
 
-li.include-nav {
-  
-}
-
-li.include-nav > a::after {
+li.include-nav > span::after {
   content: "";
   position: relative;
   border: solid rgb(65, 65, 65);
@@ -104,15 +102,15 @@ li.include-nav > a::after {
   transition: border-color .3s ease-in;
 }
 
-li.include-nav:hover a::after,
-li.include-nav:focus-within a::after {
+li.include-nav:hover span::after,
+li.include-nav:focus-within span::after {
   border-color: rgb(235, 235, 235);
   margin-bottom: 0px;
   margin-top: 3px;
   animation: rotate-dropdown-arrow-up .3s ease-in reverse forwards;
 }
 
-li.include-nav > a {
+li.include-nav > span {
   display: flex;
   align-items: center;
 }

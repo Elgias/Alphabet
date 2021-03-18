@@ -1,0 +1,56 @@
+main {
+    height: calc(100vh - 60px);
+}
+
+.test--wrapper h1 {
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px!important;
+}
+
+.test--wrapper {
+    border-radius: 8px;
+    background-color: rgb(250, 250, 250);
+}
+
+.test--sound-block {
+    height: 200px;
+}
+
+.test--sound--component {
+    height: 50px;
+    width: 250px;
+    border: 1px solid rgb(212, 210, 210);
+    border-radius: 8px;
+    
+    background-color: rgb(252, 252, 252);
+}
+
+.item--sound--play-block {
+    width: 48px;
+    height: 100%;
+    border-right: 1px solid rgb(212, 210, 210);
+}
+
+#test--sound--play-arrow {
+    border: 10px solid;
+    border-width: 10px 0 10px 16px;
+    border-color: transparent transparent transparent rgb(73, 6, 100);
+    height: 16px;
+    transition: border .1s ease-in;
+    cursor: pointer;
+}
+
+#test--sound--play-arrow.paused {
+    border-style: double;
+    border-width: 0px 0 0px 16px;
+    width: 10px;
+}
+
+.test--answers-block {
+    height: 200px;
+}
+
+.test--answers-block .row {
+    max-width: 1092px!important;
+}
