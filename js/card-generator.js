@@ -1,9 +1,9 @@
-export const CardType = {
+const CardType = {
   learnCard: 'learn-card',
   testLetterCard: 'test-letter-card'
 }
 
-export class CardGenerator {
+class CardGenerator {
 
   constructor (cardType, parameters){
     this.cardType = cardType;
@@ -35,14 +35,25 @@ export class CardGenerator {
     }
     else if (this.cardType == CardType.testLetterCard){
       return `
-      <div class="col-4 col-sm-3 col-lg-2 col-xl-2 col-xxl-2">
+      <div class="col-4 col-xxl-3">
         <div class="letter-card-placeholder">
-          <div class="letter-card shadow-lg d-flex justify-content-center align-items-center">
-            <span class="letter-card--letter" style="color: #fd6568;">C</span>
+          <div
+            class="letter-card shadow-lg d-flex justify-content-center align-items-center"
+          >
+            <span class="letter-card--letter" style="color: ${this.parameters.letterColor}"
+              >${this.parameters.letter}</span
+            >
           </div>
         </div>
       </div>
       `
     }
+  }
+
+  get htmlNode() {
+    var div = document.createElement('div');
+    div.innerHTML = this.html.trim();
+
+    return  div.firstElementChild; 
   }
 }

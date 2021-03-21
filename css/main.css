@@ -14,10 +14,9 @@ body {
 }
 
 h1 {
-  font-size: 1.6em;
+  font-size: 1.6em!important;
   line-height: 1em;
-  margin: 0;
-  margin-right: 20px;
+  margin: 0 20px 0 0!important;
 }
 
 nav ul {
